@@ -1,0 +1,1 @@
+Insert 3 dimensional models of items in this folder to be used in the game.
