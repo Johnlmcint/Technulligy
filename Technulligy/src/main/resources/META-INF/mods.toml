@@ -19,13 +19,13 @@ displayURL="http://example.com/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="Some People" #optional
+credits="Kyle, John, Gordon, and Gavin" #optional
 # A text field displayed in the mod UI
 authors="Other People" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 Tinkers in machines.
-Let your macinations go untouched.
+Let your machinations go untouched.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.technulligy]] #optional
