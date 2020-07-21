@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "technulligy:aether_ore" }
+        "": { "model": "technulligy:block/aether_ore" }
     }
 }
