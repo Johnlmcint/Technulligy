@@ -16,6 +16,7 @@ public class ItemInit {
 
 	public static Item null_core = null;
 	public static Item aether = null;
+	public static Item aether_ore = null;
 
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
@@ -23,6 +24,8 @@ public class ItemInit {
 				.register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("null_core"));
 		event.getRegistry()
 				.register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("aether"));
+		event.getRegistry()
+				.register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("aether_ore"));
 		
 		
 		
