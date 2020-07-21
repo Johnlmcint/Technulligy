@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 @Mod("technulligy")
 public class Technulligy
 {
+	
     private static final Logger LOGGER = LogManager.getLogger();
 public static final String MOD_ID = "technulligy";
 public static Technulligy instance;

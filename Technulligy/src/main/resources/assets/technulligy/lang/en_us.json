@@ -1,6 +1,7 @@
 {
  "item.technulligy.null_core": "Null Core",
  "item.technulligy.aether": "Refined Aether",
- "item.technulligy.aether_ore": "Aether Ore",
- "item.technulligy.c_ore": "C-Ore"
+ "item.technulligy.c_ore": "C-Ore",
+
+"block.technulligy.aether_ore":"Aether Ore"
 }	
