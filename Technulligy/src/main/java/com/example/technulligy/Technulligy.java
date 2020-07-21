@@ -21,7 +21,8 @@ import java.util.stream.Collectors;
 public class Technulligy
 {
     private static final Logger LOGGER = LogManager.getLogger();
-
+public static final String MOD_ID = "technulligy";
+public static Technulligy instance;
     public Technulligy() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -32,6 +33,9 @@ public class Technulligy
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
+        
+        instance = this;
+        
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
