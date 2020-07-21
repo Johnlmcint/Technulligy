@@ -4,6 +4,11 @@
  "item.technulligy.c_ore": "C-Ore",
  "item.technulligy.basic_core": "Basic Core",
  "item.technulligy.weak_core": "Weakened Core",
+ "item.technulligy.savage_core": "Savage Core",
+ "item.technulligy.guard_core": "Guardian Core",
+ "item.technulligy.wind_core": "Wind Core",
+ "item.technulligy.vital_core": "Vitality Core",
+ "item.technulligy.haste_core": "Haste Core",
 
 "block.technulligy.aether_ore":"Aether Ore"
 }	
