@@ -74,8 +74,6 @@ public static Technulligy instance;
              
         }
         
-        @SubscribeEvent
-        
     }
     
 }
