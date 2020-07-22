@@ -33,18 +33,20 @@ public class Technulligy {
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
-	private void setup(final FMLCommonSetupEvent event) {}
+	private void setup(final FMLCommonSetupEvent event) {
+		TechnulligyOreGen.generateOre();
+	}
 
 	private void doClientStuff(final FMLClientSetupEvent event) {
 	}
 
 	@SubscribeEvent
-	public void onServerStarting(FMLServerStartingEvent event) {
+	public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
+
 	}
 
 	@SubscribeEvent
-	public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
-		TechnulligyOreGen.generateOre();
+	public void onServerStarting(FMLServerStartingEvent event) {
 	}
 
 }
