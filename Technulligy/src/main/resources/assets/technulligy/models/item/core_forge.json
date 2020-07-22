@@ -1,6 +1,3 @@
 {
-"parent" : "item/generated",
-"textures":{
-"layer0":"technulligy:items/core_forge"
-	}
+"parent": "technulligy:block/core_forge"
 }
