@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraftforge.common.ToolType;
 
@@ -29,4 +30,8 @@ public class CoreForge extends Block {
         return getDefaultState().with(BlockStateProperties.FACING, context.getNearestLookingDirection().getOpposite());
     }
 	
+	@Override
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+        builder.add(BlockStateProperties.FACING);
+	}
 }//CoreForge
