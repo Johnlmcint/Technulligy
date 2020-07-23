@@ -14,7 +14,7 @@
       "tag": "forge:stone"
     },
     "#": {
-      "tag": "forge:ores/coal"
+      "tag": "minecraft:coals"
     }
   },
   "result": {
