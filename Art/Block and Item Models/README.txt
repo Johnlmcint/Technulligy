@@ -1,0 +1,1 @@
+Put block and custom item models inside of this folder in another containment folder.
