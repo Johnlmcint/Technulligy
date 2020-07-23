@@ -25,9 +25,9 @@ public class BlockInit {
 
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
-		event.getRegistry().register(new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(3, 15).sound(SoundType.METAL).harvestLevel(1).harvestTool(ToolType.PICKAXE)).setRegistryName("aether_ore"));
-		event.getRegistry().register(new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(15, 15).sound(SoundType.METAL).harvestLevel(1).harvestTool(ToolType.PICKAXE)).setRegistryName("c_oreb"));
-		event.getRegistry().register(new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(1, 15).sound(SoundType.METAL).harvestLevel(1).harvestTool(ToolType.PICKAXE)).setRegistryName("core_forge"));
+		event.getRegistry().register(new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(3, 15).sound(SoundType.STONE).harvestLevel(1).harvestTool(ToolType.PICKAXE)).setRegistryName("aether_ore"));
+		event.getRegistry().register(new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(15, 15).sound(SoundType.STONE).harvestLevel(1).harvestTool(ToolType.PICKAXE)).setRegistryName("c_oreb"));
+		event.getRegistry().register(new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(1, 15).sound(SoundType.ANVIL).harvestLevel(1).harvestTool(ToolType.PICKAXE)).setRegistryName("core_forge"));
 	}
 	@SubscribeEvent
 	public static void registerBlockItems(final RegistryEvent.Register<Item> event) {

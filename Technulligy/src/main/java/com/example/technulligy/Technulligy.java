@@ -3,6 +3,7 @@ package com.example.technulligy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.example.technulligy.setup.Registration;
 import com.example.technulligy.world.gen.TechnulligyOreGen;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -11,8 +12,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod("technulligy")
@@ -27,7 +26,7 @@ public class Technulligy {
 
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-
+		Registration.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 		instance = this;
 
 		MinecraftForge.EVENT_BUS.register(this);
@@ -39,14 +38,4 @@ public class Technulligy {
 
 	private void doClientStuff(final FMLClientSetupEvent event) {
 	}
-
-	@SubscribeEvent
-	public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
-
-	}
-
-	@SubscribeEvent
-	public void onServerStarting(FMLServerStartingEvent event) {
-	}
-
 }
