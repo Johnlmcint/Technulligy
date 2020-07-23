@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "technulligy",
+  "pattern": [
+    "axa",
+    "x#x",
+    "axa"
+  ],
+  "key": {
+    "a": {
+      "item": "technulligy:null_core"
+    },
+    "x": {
+      "tag": "forge:stone"
+    },
+    "#": {
+      "tag": "minecraft:coals"
+    }
+  },
+  "result": {
+    "item": "technulligy:weak_core"
+  }
+}
