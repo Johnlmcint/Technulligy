@@ -12,7 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class Registration {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
 			Technulligy.MOD_ID);
-	private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
+	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
 			Technulligy.MOD_ID);
 
 	public static void init() {
