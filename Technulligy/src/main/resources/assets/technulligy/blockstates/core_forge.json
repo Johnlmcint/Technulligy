@@ -1,17 +1,8 @@
 {
-    "variants": {
-        "": { "model": "technulligy:block/core_forge" }
-    }
+  "variants": {
+    "facing=south": { "model": "technulligy:block/core_forge", "y": 90},
+    "facing=north": { "model": "technulligy:block/core_forge", "y":  270},
+    "facing=east": { "model": "technulligy:block/core_forge"},
+    "facing=west": { "model": "technulligy:block/core_forge", "y":  180}
+  }
 }
-
-private void orientedBlock(Block block, Function<BlockState, ModelFile> modelFunc) {
-        getVariantBuilder(block)
-                .forAllStates(state -> {
-                    Direction dir = state.get(BlockStateProperties.FACING);
-                    return ConfiguredModel.builder()
-                            .modelFile(modelFunc.apply(state))
-                            .rotationX(dir.getAxis() == Direction.Axis.Y ?  dir.getAxisDirection().getOffset() * -90 : 0)
-                            .rotationY(dir.getAxis() != Direction.Axis.Y ? ((dir.getHorizontalIndex() + 2) % 4) * 90 : 0)
-                            .build();
-                });
-    }
