@@ -29,6 +29,16 @@ public class Recipes extends RecipeProvider {
 	                .setGroup("technulligy")
 	                .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
 	                .build(consumer);
+	        ShapedRecipeBuilder.shapedRecipe(Registration.BASIC_CORE.get())
+            .patternLine("axa")
+            .patternLine("x#x")
+            .patternLine("axa")
+            .key('a', Registration.WEAK_CORE.get())
+            .key('x', Tags.Items.INGOTS_IRON)
+            .key('#', Registration.AETHER.get())
+            .setGroup("technulligy")
+            .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
+            .build(consumer);
 	        
 	    }
 }

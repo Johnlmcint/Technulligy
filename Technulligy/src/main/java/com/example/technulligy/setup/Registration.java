@@ -24,6 +24,7 @@ public class Registration {
 	}
 
 	public static final RegistryObject<Item> NULL_CORE = ITEMS.register("null_core", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> AETHER = ITEMS.register("aether", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> C_ORE = ITEMS.register("c_ore", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> BASIC_CORE = ITEMS.register("basic_core", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> WEAK_CORE = ITEMS.register("weak_core", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));

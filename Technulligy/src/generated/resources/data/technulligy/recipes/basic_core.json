@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "technulligy",
+  "pattern": [
+    "axa",
+    "x#x",
+    "axa"
+  ],
+  "key": {
+    "a": {
+      "item": "technulligy:weak_core"
+    },
+    "x": {
+      "tag": "forge:ingots/iron"
+    },
+    "#": {
+      "item": "technulligy:aether"
+    }
+  },
+  "result": {
+    "item": "technulligy:basic_core"
+  }
+}
