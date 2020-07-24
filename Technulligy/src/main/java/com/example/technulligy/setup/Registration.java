@@ -3,6 +3,7 @@ package com.example.technulligy.setup;
 import com.example.technulligy.Technulligy;
 import com.example.technulligy.Technulligy.CreativeItemGroup;
 import com.example.technulligy.blocks.CoreForge;
+import com.example.technulligy.blocks.CoreForgeTile;
 import com.example.technulligy.items.BasicCore;
 import com.example.technulligy.items.GuardianCore;
 import com.example.technulligy.items.HasteCore;
@@ -11,10 +12,11 @@ import com.example.technulligy.items.VitalityCore;
 import com.example.technulligy.items.WeakCore;
 import com.example.technulligy.items.WindCore;
 
-import net.minecraft.item.ItemGroup;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,10 +27,12 @@ public class Registration {
 			Technulligy.MOD_ID);
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
 			Technulligy.MOD_ID);
+	 private static final DeferredRegister<TileEntityType<?>> TILES = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES,Technulligy.MOD_ID);
 
 	public static void init() {
 		ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 		BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		TILES.register(FMLJavaModLoadingContext.get().getModEventBus());
 	}
 
 	public static final RegistryObject<Item> NULL_CORE = ITEMS.register("null_core", () -> new Item(new Item.Properties().group(CreativeItemGroup.instance)));
@@ -43,6 +47,11 @@ public class Registration {
 	public static final RegistryObject<Item> VITAL_CORE = ITEMS.register("vital_core", VitalityCore::new);
 	public static final RegistryObject<Item> HASTE_CORE = ITEMS.register("haste_core", HasteCore::new);
 	public static final RegistryObject<Block> CORE_FORGE = BLOCKS.register("core_forge", CoreForge::new);
+<<<<<<< HEAD
     public static final RegistryObject<Item> CORE_FORGE_ITEM  = ITEMS.register("core_forge", () -> new BlockItem(CORE_FORGE.get(), new Item.Properties().group(CreativeItemGroup.instance)));
 
+=======
+    public static final RegistryObject<Item> CORE_FORGE_ITEM  = ITEMS.register("core_forge", () -> new BlockItem(CORE_FORGE.get(), new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<TileEntityType<CoreForgeTile>> CORE_FORGE_TILE = TILES.register("core_forge", () -> TileEntityType.Builder.create(CoreForgeTile::new, CORE_FORGE.get()).build(null));
+>>>>>>> f7b551fd77b5b3add22e924941f25b6746f04da9
 }
