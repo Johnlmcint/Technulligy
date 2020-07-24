@@ -15,7 +15,7 @@
     },
     "#": {
       "tag": "minecraft:coals"
-    }
+    }		
   },
   "result": {
     "item": "technulligy:weak_core"
