@@ -1,6 +1,6 @@
 package com.example.technulligy.world.gen;
 
-import com.example.technulligy.init.BlockInit;
+import com.example.technulligy.setup.Registration;
 
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
@@ -17,7 +17,7 @@ public class TechnulligyOreGen {
 			ConfiguredPlacement customConfig = Placement.COUNT_RANGE.configure(new CountRangeConfig(10, 20, 5, 50));
 			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
 					Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-							BlockInit.aether_ore.getDefaultState(), 4)).withPlacement(customConfig));
+							Registration.AETHER_ORE.get().getDefaultState(), 4)).withPlacement(customConfig));
 		}
 	}
 

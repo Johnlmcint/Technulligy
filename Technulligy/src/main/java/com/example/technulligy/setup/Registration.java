@@ -1,12 +1,15 @@
 package com.example.technulligy.setup;
 
 import com.example.technulligy.Technulligy;
+import com.example.technulligy.blocks.AetherOre;
 import com.example.technulligy.blocks.CoreForge;
+import com.example.technulligy.blocks.CoreForgeTile;
 
-import net.minecraft.item.ItemGroup;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -17,10 +20,13 @@ public class Registration {
 			Technulligy.MOD_ID);
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
 			Technulligy.MOD_ID);
+	 private static final DeferredRegister<TileEntityType<?>> TILES = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, 
+			 Technulligy.MOD_ID);
 
 	public static void init() {
 		ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 		BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		TILES.register(FMLJavaModLoadingContext.get().getModEventBus());
 	}
 
 	public static final RegistryObject<Item> NULL_CORE = ITEMS.register("null_core", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
@@ -35,5 +41,11 @@ public class Registration {
 	public static final RegistryObject<Item> HASTE_CORE = ITEMS.register("haste_core", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Block> CORE_FORGE = BLOCKS.register("core_forge", CoreForge::new);
     public static final RegistryObject<Item> CORE_FORGE_ITEM  = ITEMS.register("core_forge", () -> new BlockItem(CORE_FORGE.get(), new Item.Properties().group(ItemGroup.MISC)));
-
+    public static final RegistryObject<TileEntityType<CoreForgeTile>> CORE_FORGE_TILE = TILES.register("core_forge", () -> TileEntityType.Builder.create(CoreForgeTile::new, CORE_FORGE.get()).build(null));
+    
+    
+    
+    
+    public static final RegistryObject<Block> AETHER_ORE = BLOCKS.register("aether_ore", AetherOre::new);
+    public static final RegistryObject<Item> AETHER_ORE_ITEM  = ITEMS.register("aether_ore", () -> new BlockItem(AETHER_ORE.get(), new Item.Properties().group(ItemGroup.MISC)));
 }
