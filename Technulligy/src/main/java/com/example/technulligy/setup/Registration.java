@@ -47,11 +47,8 @@ public class Registration {
 	public static final RegistryObject<Item> VITAL_CORE = ITEMS.register("vital_core", VitalityCore::new);
 	public static final RegistryObject<Item> HASTE_CORE = ITEMS.register("haste_core", HasteCore::new);
 	public static final RegistryObject<Block> CORE_FORGE = BLOCKS.register("core_forge", CoreForge::new);
-<<<<<<< HEAD
     public static final RegistryObject<Item> CORE_FORGE_ITEM  = ITEMS.register("core_forge", () -> new BlockItem(CORE_FORGE.get(), new Item.Properties().group(CreativeItemGroup.instance)));
 
-=======
-    public static final RegistryObject<Item> CORE_FORGE_ITEM  = ITEMS.register("core_forge", () -> new BlockItem(CORE_FORGE.get(), new Item.Properties().group(ItemGroup.MISC)));
-    public static final RegistryObject<TileEntityType<CoreForgeTile>> CORE_FORGE_TILE = TILES.register("core_forge", () -> TileEntityType.Builder.create(CoreForgeTile::new, CORE_FORGE.get()).build(null));
->>>>>>> f7b551fd77b5b3add22e924941f25b6746f04da9
-}
+    }
+
+
