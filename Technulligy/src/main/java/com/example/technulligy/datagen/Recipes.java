@@ -38,7 +38,6 @@ public class Recipes extends RecipeProvider {
             .key('#', Registration.AETHER.get())
             .setGroup("technulligy")
             .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
-            .build(consumer);
-	        
+            .build(consumer);	        
 	    }
 }
