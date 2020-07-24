@@ -49,7 +49,7 @@ public class Technulligy {
 		}
 		@Override
 		public ItemStack createIcon() {
-			return new ItemStack(BlockInit.aether_ore);
+			return new ItemStack(BlockInit.c_oreb);
 		}
 	}
 }
