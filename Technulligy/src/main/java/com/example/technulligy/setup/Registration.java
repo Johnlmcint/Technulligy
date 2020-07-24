@@ -2,6 +2,11 @@ package com.example.technulligy.setup;
 
 import com.example.technulligy.Technulligy;
 import com.example.technulligy.blocks.CoreForge;
+import com.example.technulligy.items.BasicCore;
+import com.example.technulligy.items.GuardianCore;
+import com.example.technulligy.items.SavageCore;
+import com.example.technulligy.items.WeakCore;
+import com.example.technulligy.items.WindCore;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.block.Block;
@@ -27,11 +32,11 @@ public class Registration {
 	public static final RegistryObject<Item> CORE_CENTER = ITEMS.register("core_center", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> AETHER = ITEMS.register("aether", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> C_ORE = ITEMS.register("c_ore", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
-	public static final RegistryObject<Item> BASIC_CORE = ITEMS.register("basic_core", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
-	public static final RegistryObject<Item> WEAK_CORE = ITEMS.register("weak_core", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
-	public static final RegistryObject<Item> SAVAGE_CORE = ITEMS.register("savage_core", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
-	public static final RegistryObject<Item> GUARD_CORE = ITEMS.register("guard_core", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
-	public static final RegistryObject<Item> WIND_CORE= ITEMS.register("wind_core", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+	public static final RegistryObject<Item> BASIC_CORE = ITEMS.register("basic_core", BasicCore::new);
+	public static final RegistryObject<Item> WEAK_CORE = ITEMS.register("weak_core", WeakCore::new);
+	public static final RegistryObject<Item> SAVAGE_CORE = ITEMS.register("savage_core", SavageCore::new);
+	public static final RegistryObject<Item> GUARD_CORE = ITEMS.register("guard_core", GuardianCore::new);
+	public static final RegistryObject<Item> WIND_CORE= ITEMS.register("wind_core", WindCore::new);
 	public static final RegistryObject<Item> VITAL_CORE = ITEMS.register("vital_core", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Item> HASTE_CORE = ITEMS.register("haste_core", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Block> CORE_FORGE = BLOCKS.register("core_forge", CoreForge::new);
