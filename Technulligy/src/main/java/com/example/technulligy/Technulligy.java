@@ -29,8 +29,9 @@ public class Technulligy {
 
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-		Registration.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-		Registration.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+	//	Registration.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		//Registration.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+	//	Registration.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
 		instance = this;
 
 		MinecraftForge.EVENT_BUS.register(this);

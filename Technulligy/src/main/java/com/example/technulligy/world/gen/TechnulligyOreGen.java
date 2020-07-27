@@ -17,7 +17,7 @@ public class TechnulligyOreGen {
 			ConfiguredPlacement customConfig = Placement.COUNT_RANGE.configure(new CountRangeConfig(10, 20, 5, 50));
 			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
 					Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-							Registration.AETHER_ORE.get().getDefaultState(), 4)).withPlacement(customConfig));
+							Registration.AETHER_ORE.get(), 4)).withPlacement(customConfig));
 		}
 	}
 
