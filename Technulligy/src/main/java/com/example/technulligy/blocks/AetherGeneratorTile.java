@@ -4,7 +4,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import com.electronwill.nightconfig.core.Config;
 import com.example.technulligy.setup.Registration;
 import com.example.technulligy.tools.CustomEnergyStorage;
 
@@ -30,8 +29,8 @@ public class AetherGeneratorTile extends TileEntity implements ITickableTileEnti
 	    private CustomEnergyStorage energyStorage = createEnergy();
 	    private LazyOptional<IItemHandler> handler = LazyOptional.of(() -> itemHandler);
 	    private LazyOptional<IEnergyStorage> energy = LazyOptional.of(() -> energyStorage);
+	    private CompoundNBT customTileData;
 	    private int counter;
-		private CompoundNBT customTileData;
 	    public AetherGeneratorTile() {
 	        super(Registration.AETHER_GENERATOR_TILE.get());
 	    }
@@ -114,8 +113,6 @@ public class AetherGeneratorTile extends TileEntity implements ITickableTileEnti
 
 	            @Override
 	            protected void onContentsChanged(int slot) {
-	                // To make sure the TE persists when the chunk is saved later we need to
-	                // mark it dirty every time the item handler changes
 	                markDirty();
 	            }
 
