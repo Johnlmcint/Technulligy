@@ -1,6 +1,8 @@
 package com.example.technulligy.setup;
 
 import com.example.technulligy.Technulligy;
+import com.example.technulligy.blocks.AetherGenerator;
+import com.example.technulligy.blocks.AetherGeneratorTile;
 import com.example.technulligy.blocks.CoreForge;
 import com.example.technulligy.blocks.CoreForgeTile;
 import com.example.technulligy.items.BasicCore;
@@ -45,5 +47,8 @@ public class Registration {
 	public static final RegistryObject<Item> HASTE_CORE = ITEMS.register("haste_core", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 	public static final RegistryObject<Block> CORE_FORGE = BLOCKS.register("core_forge", CoreForge::new);
     public static final RegistryObject<Item> CORE_FORGE_ITEM  = ITEMS.register("core_forge", () -> new BlockItem(CORE_FORGE.get(), new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Block> AETHER_GENERATOR = BLOCKS.register("aether_generator", AetherGenerator::new);
+    public static final RegistryObject<Item> AETHER_GENERATOR_ITEM = ITEMS.register("aether_generator", () -> new BlockItem(AETHER_GENERATOR.get(), new Item.Properties().group(ItemGroup.MISC)));
     public static final RegistryObject<TileEntityType<CoreForgeTile>> CORE_FORGE_TILE = TILES.register("core_forge", () -> TileEntityType.Builder.create(CoreForgeTile::new, CORE_FORGE.get()).build(null));
+    public static final RegistryObject<TileEntityType<AetherGeneratorTile>> AETHER_GENERATOR_TILE = TILES.register("aether_generator", () -> TileEntityType.Builder.create(AetherGeneratorTile::new, AETHER_GENERATOR.get()).build(null));
 }
