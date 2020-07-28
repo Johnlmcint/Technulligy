@@ -1,3 +1,4 @@
+/*
 package com.example.technulligy.blocks;
 
 import static com.example.technulligy.setup.Registration.CORE_FORGE_TILE;
@@ -176,4 +177,4 @@ public class CoreForgeTile extends TileEntity implements ITickableTileEntity  {
 	
 	
 	
-}
+}*/

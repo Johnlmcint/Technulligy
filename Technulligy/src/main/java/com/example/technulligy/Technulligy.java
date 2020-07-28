@@ -3,9 +3,12 @@ package com.example.technulligy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.example.technulligy.init.BlockInit;
+//import com.example.technulligy.init.BlockInit.CreativeItemGroup;
 import com.example.technulligy.setup.Registration;
 import com.example.technulligy.world.gen.TechnulligyOreGen;
-
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,8 +29,9 @@ public class Technulligy {
 
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-		Registration.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-		Registration.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+	//	Registration.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		//Registration.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+	//	Registration.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
 		instance = this;
 
 		MinecraftForge.EVENT_BUS.register(this);
@@ -38,5 +42,15 @@ public class Technulligy {
 	}
 
 	private void doClientStuff(final FMLClientSetupEvent event) {
+	}
+	public static class CreativeItemGroup extends ItemGroup {
+		public static final CreativeItemGroup instance = new CreativeItemGroup(ItemGroup.GROUPS.length,"technulligytab");
+		private CreativeItemGroup(int index, String label) {
+			super(index, label);
+		}
+		@Override
+		public ItemStack createIcon() {
+			return new ItemStack(BlockInit.c_oreb);
+		}
 	}
 }
