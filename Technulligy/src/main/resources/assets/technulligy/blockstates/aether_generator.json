@@ -1,0 +1,50 @@
+{
+  "variants": {
+    "facing=down,powered=false": {
+      "model": "technulligy:block/aether_gen",
+      "x": 90
+    },
+    "facing=up,powered=false": {
+      "model": "technulligy:block/aether_gen",
+      "x": -90
+    },
+    "facing=north,powered=false": {
+      "model": "technulligy:block/aether_gen"
+    },
+    "facing=south,powered=false": {
+      "model": "technulligy:block/aether_gen",
+      "y": 180
+    },
+    "facing=west,powered=false": {
+      "model": "technulligy:block/aether_gen",
+      "y": 270
+    },
+    "facing=east,powered=false": {
+      "model": "technulligy:block/aether_gen",
+      "y": 90
+    },
+    "facing=down,powered=true": {
+      "model": "technulligy:block/aether_genpowered",
+      "x": 90
+    },
+    "facing=up,powered=true": {
+      "model": "technulligy:block/aether_genpowered",
+      "x": -90
+    },
+    "facing=north,powered=true": {
+      "model": "technulligy:block/aether_genpowered"
+    },
+    "facing=south,powered=true": {
+      "model": "technulligy:block/aether_genpowered",
+      "y": 180
+    },
+    "facing=west,powered=true": {
+      "model": "technulligy:block/aether_genpowered",
+      "y": 270
+    },
+    "facing=east,powered=true": {
+      "model": "technulligy:block/aether_genpowered",
+      "y": 90
+    }
+  }
+}

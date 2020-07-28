@@ -10,6 +10,7 @@
  "item.technulligy.vital_core": "Vitality Core",
  "item.technulligy.haste_core": "Haste Core",
 
+"block.technulligy.aether_generator": "Aether_Generator",
 "block.technulligy.aether_ore":"Aether Ore",
 "block.technulligy.c_oreb":"C-Ore",
 "block.technulligy.core_forge":"Core Forge"
