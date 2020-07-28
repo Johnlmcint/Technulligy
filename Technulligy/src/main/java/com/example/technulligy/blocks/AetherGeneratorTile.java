@@ -92,7 +92,7 @@ public class AetherGeneratorTile extends TileEntity implements ITickableTileEnti
 	        }
 	    }
 	    @Override
-	    public void func_230337_a_(BlockState blockstate, CompoundNBT tag) {
+	    public void read(BlockState blockstate, CompoundNBT tag) {
 	        this.pos = new BlockPos(tag.getInt("x"), tag.getInt("y"), tag.getInt("z"));
 	        if (tag.contains("ForgeData")) this.customTileData = tag.getCompound("ForgeData");
 	        if (getCapabilities() != null && tag.contains("ForgeCaps")) deserializeCaps(tag.getCompound("ForgeCaps"));

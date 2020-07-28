@@ -19,24 +19,24 @@ public class AetherGeneratorScreen extends ContainerScreen<AetherGeneratorContai
 	}
 //draw GUI container background
 	@Override
-	protected void func_230450_a_(MatrixStack Matrixstack, float partialTicks, int mousex, int mouseY) {
+	protected void drawGuiContainerBackgroundLayer(MatrixStack Matrixstack, float partialTicks, int mousex, int mouseY) {
 		RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.minecraft.getTextureManager().bindTexture(GUI);
 		int relX = (this.width - this.xSize) / 2;
 		int relY = (this.height - this.ySize) / 2;
-		this.blit(relX, relY, 0, 0, this.xSize, this.ySize);
+		this.blit(Matrixstack, relX, relY, 0, 0, this.xSize, this.ySize);
 
 	}
 
 // draw GUI container foreground
 	@Override
-	protected void func_230451_b_(MatrixStack p_230451_1_, int mouseX, int mouseY) {
-		drawString(Minecraft.getInstance().fontRenderer, "Energy: " + container.getEnergy(), 10, 10, 0xffffff);
+	protected void drawGuiContainerForegroundLayer(MatrixStack Matrixstack, int mouseX, int mouseY) {
+		drawString(Matrixstack, Minecraft.getInstance().fontRenderer, "Energy: " + container.getEnergy(), 10, 10, 0xffffff);
 	}
+	//Render
     @Override
-    public void render(int mouseX, int mouseY, float partialTicks) {
-        this.renderBackground();
-        super.render(mouseX, mouseY, partialTicks);
-        this.renderHoveredToolTip(mouseX, mouseY);
+    public void render(MatrixStack Matrixstack,int mouseX, int mouseY, float partialTicks) {
+        this.renderBackground(Matrixstack);
+        super.render(Matrixstack, mouseX, mouseY, partialTicks);
     }
 }

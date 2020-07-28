@@ -14,8 +14,9 @@ public class AetherOre extends Block{
 				.hardnessAndResistance(3,15)
 				.harvestLevel(1)
 				.harvestTool(ToolType.PICKAXE)
-				
-				);//Block Properties
+				.setLightLevel((p_235470_0_) -> {
+					return 2;
+				}));//Block Properties
 	
 		
 	}

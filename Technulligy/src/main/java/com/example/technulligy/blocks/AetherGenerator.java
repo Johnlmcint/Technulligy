@@ -13,25 +13,24 @@ import net.minecraftforge.common.ToolType;
 public class AetherGenerator extends Block {
 
 	public AetherGenerator() {
-		//Properties of block
+		// Properties of block
 		super(Properties.create(Material.IRON)
 
-				.sound(SoundType.STONE).hardnessAndResistance(1, 15)
-				.harvestLevel(1)
-				.harvestTool(ToolType.PICKAXE)
-				// unmapped lightvalue
-				.func_235838_a_((p_235470_0_) -> {
-					return 14; 
+				.sound(SoundType.STONE).hardnessAndResistance(1, 15).harvestLevel(1).harvestTool(ToolType.PICKAXE)
+				.setLightLevel((p_235470_0_) -> {
+					return 14;
 				}));
 
 	}
-	 @Override
-	    public boolean hasTileEntity(BlockState state) {
-	        return true;
-	    }
-	  @Nullable
-	    @Override
-	    public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-	        return new AetherGeneratorTile();
-	    }
+
+	@Override
+	public boolean hasTileEntity(BlockState state) {
+		return true;
+	}
+
+	@Nullable
+	@Override
+	public TileEntity createTileEntity(BlockState state, IBlockReader world) {
+		return new AetherGeneratorTile();
+	}
 }
