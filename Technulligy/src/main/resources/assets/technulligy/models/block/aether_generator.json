@@ -1,11 +1,11 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "technulligy:block/aether_gen",
-    "up": "technulligy:block/aether_gen",
-    "north": "technulligy:block/aether_gen_front",
-    "south": "technulligy:block/aether_gen",
-    "east": "technulligy:block/aether_gen",
-    "west": "technulligy:block/aether_gen"
+    "down": "technulligy:block/aether_generator",
+    "up": "technulligy:block/aether_generator",
+    "north": "technulligy:block/aether_generator_front",
+    "south": "technulligy:block/aether_generator",
+    "east": "technulligy:block/aether_generator",
+    "west": "technulligy:block/aether_generator"
   }
 }
