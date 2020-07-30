@@ -1,6 +1,6 @@
 	{
     "parent": "block/cube_all",
     "textures": {
-        "all": "technulligy:blocks/c_oreb"
+        "all": "technulligy:block/c_oreb"
     }
 }
