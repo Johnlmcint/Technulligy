@@ -3,7 +3,7 @@ package com.example.technulligy.blocks;
 
 
 import javax.annotation.Nullable;
-
+//imports the block and it's mechanics
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SoundType;
@@ -30,7 +30,7 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.network.NetworkHooks;
 
 public class AetherGenerator extends Block {
-
+//Defines the sound, location, and tools needed to harvest this block
 	public AetherGenerator() {
 
 		// Properties of block
