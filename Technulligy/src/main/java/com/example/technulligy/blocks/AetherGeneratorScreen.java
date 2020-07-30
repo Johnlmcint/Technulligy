@@ -17,7 +17,6 @@ public class AetherGeneratorScreen extends ContainerScreen<AetherGeneratorContai
 	public AetherGeneratorScreen(AetherGeneratorContainer container, PlayerInventory inv, ITextComponent name) {
 		super(container, inv, name);
 	}
-//draw GUI container background
 	@Override
 	protected void drawGuiContainerBackgroundLayer(MatrixStack Matrixstack, float partialTicks, int mousex, int mouseY) {
 		RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
@@ -28,12 +27,10 @@ public class AetherGeneratorScreen extends ContainerScreen<AetherGeneratorContai
 
 	}
 
-// draw GUI container foreground
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack Matrixstack, int mouseX, int mouseY) {
 		drawString(Matrixstack, Minecraft.getInstance().fontRenderer, "Energy: " + container.getEnergy(), 10, 10, 0xffffff);
 	}
-	//Render
     @Override
     public void render(MatrixStack Matrixstack,int mouseX, int mouseY, float partialTicks) {
         this.renderBackground(Matrixstack);
