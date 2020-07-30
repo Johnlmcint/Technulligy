@@ -97,11 +97,11 @@ public class AetherGeneratorTile extends TileEntity implements ITickableTileEnti
 
 	@Override
 	public void read(BlockState blockstate, CompoundNBT tag) {
-		this.pos = new BlockPos(tag.getInt("x"), tag.getInt("y"), tag.getInt("z"));
-		if (tag.contains("ForgeData"))
-			tag.getCompound("ForgeData");
-		if (getCapabilities() != null && tag.contains("ForgeCaps"))
-			deserializeCaps(tag.getCompound("ForgeCaps"));
+		 itemHandler.deserializeNBT(tag.getCompound("inv"));
+	        energyStorage.deserializeNBT(tag.getCompound("energy"));
+
+	        counter = tag.getInt("counter");
+	        super.read(blockstate, tag);
 	}
 
 	@Override
