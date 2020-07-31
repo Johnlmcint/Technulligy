@@ -138,7 +138,7 @@ public class AetherGeneratorTile extends TileEntity implements ITickableTileEnti
 	}
 
 	private CustomEnergyStorage createEnergy() {
-		return new CustomEnergyStorage(10000000, 0) {
+		return new CustomEnergyStorage(100000, 0) {
 			@Override
 			protected void onEnergyChanged() {
 				markDirty();

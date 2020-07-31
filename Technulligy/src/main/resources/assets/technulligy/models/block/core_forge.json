@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"2": "technulligy:blocks/core_forge",
+		"2": "technulligy:block/core_forge",
 		"particle": "technulligy:block/core_forge"
 	},
 	"elements": [
