@@ -1,4 +1,4 @@
-package com.example.technulligy.blocks;
+/*package com.example.technulligy.blocks;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -112,4 +112,4 @@ public class CoreForgeTile extends TileEntity implements ITickableTileEntity {
 		return super.getCapability(cap, side);
 	}
 
-}
+}*/

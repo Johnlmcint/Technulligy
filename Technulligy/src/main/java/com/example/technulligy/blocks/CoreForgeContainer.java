@@ -1,4 +1,4 @@
-package com.example.technulligy.blocks;
+/*package com.example.technulligy.blocks;
 
 import com.example.technulligy.setup.Registration;
 import com.example.technulligy.tools.CustomEnergyStorage;
@@ -155,4 +155,4 @@ public class CoreForgeContainer extends Container {
         topRow += 58;
         addSlotRange(playerInventory, 0, leftCol, topRow, 9, 18);
     }
-}
+}*/

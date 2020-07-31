@@ -1,4 +1,4 @@
-package com.example.technulligy.blocks;
+/*package com.example.technulligy.blocks;
 
 import com.example.technulligy.Technulligy;
 import com.mojang.blaze3d.matrix.MatrixStack;
@@ -38,3 +38,4 @@ public class CoreForgeScreen extends ContainerScreen<AetherGeneratorContainer> {
         super.render(Matrixstack, mouseX, mouseY, partialTicks);
     }
 }
+*/

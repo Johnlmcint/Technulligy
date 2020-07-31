@@ -3,11 +3,13 @@ package com.example.technulligy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.example.technulligy.blocks.AetherGeneratorScreen;
 import com.example.technulligy.init.BlockInit;
 //import com.example.technulligy.init.BlockInit.CreativeItemGroup;
 import com.example.technulligy.setup.Registration;
 import com.example.technulligy.world.gen.TechnulligyOreGen;
 import net.minecraft.item.ItemStack;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -43,6 +45,7 @@ public class Technulligy {
 	}
 
 	private void doClientStuff(final FMLClientSetupEvent event) {
+		ScreenManager.registerFactory(Registration.AETHER_GENERATOR_CONTAINER.get(), AetherGeneratorScreen::new);
 	}
 	public static class CreativeItemGroup extends ItemGroup {
 		public static final CreativeItemGroup instance = new CreativeItemGroup(ItemGroup.GROUPS.length,"technulligytab");

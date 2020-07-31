@@ -65,12 +65,12 @@ public class Registration {
         World world = inv.player.getEntityWorld();
         return new AetherGeneratorContainer(windowId, world, pos, inv, inv.player);
     }));
-    public static final RegistryObject<TileEntityType<AetherGeneratorTile>> CORE_FORGE_TILE = TILES.register("core_forge", () -> TileEntityType.Builder.create(AetherGeneratorTile::new, CORE_FORGE.get()).build(null));
+ /*   public static final RegistryObject<TileEntityType<AetherGeneratorTile>> CORE_FORGE_TILE = TILES.register("core_forge", () -> TileEntityType.Builder.create(AetherGeneratorTile::new, CORE_FORGE.get()).build(null));
     public static final RegistryObject<ContainerType<AetherGeneratorContainer>> CORE_FORGE_CONTAINER = CONTAINERS.register("core_forge", () -> IForgeContainerType.create((windowId, inv, data) -> {
         BlockPos pos = data.readBlockPos();
         World world = inv.player.getEntityWorld();
         return new AetherGeneratorContainer(windowId, world, pos, inv, inv.player);
-    }));
+    }));*/
 
     }
 
