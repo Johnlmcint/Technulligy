@@ -17,6 +17,7 @@ public class AetherGeneratorScreen extends ContainerScreen<AetherGeneratorContai
 	public AetherGeneratorScreen(AetherGeneratorContainer container, PlayerInventory inv, ITextComponent name) {
 		super(container, inv, name);
 	}
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void drawGuiContainerBackgroundLayer(MatrixStack Matrixstack, float partialTicks, int mousex, int mouseY) {
 		RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
