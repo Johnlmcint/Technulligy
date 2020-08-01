@@ -1,5 +1,7 @@
 package com.example.technulligy.datagen;
 
+import com.example.technulligy.setup.Registration;
+
 import net.minecraft.data.DataGenerator;
 
 public class LootTables extends BaseLootTableProvider {
@@ -10,7 +12,8 @@ public class LootTables extends BaseLootTableProvider {
 
 	@Override
 	protected void addTables() {
-		// TODO Auto-generated method stub
+		  lootTables.put(Registration.AETHER_GENERATOR.get(), createStandardTable("aether_generator", Registration.AETHER_GENERATOR.get()));
+		  lootTables.put(Registration.CORE_FORGE.get(), createStandardTable("core_forge", Registration.CORE_FORGE.get()));
 		
 	}
 }

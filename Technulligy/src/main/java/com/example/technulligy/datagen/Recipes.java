@@ -21,15 +21,15 @@ public class Recipes extends RecipeProvider {
 	 @Override
 	    protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
 	        ShapedRecipeBuilder.shapedRecipe(Registration.WEAK_CORE.get())
-	                .patternLine("axa")
-	                .patternLine("x#x")
-	                .patternLine("axa")
-	                .key('a', Registration.NULL_CORE.get())
-	                .key('x', Tags.Items.STONE)
-	                .key('#', ItemTags.COALS)
-	                .setGroup("technulligy")
-	                .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
-	                .build(consumer);
+	         .patternLine("axa")
+	         .patternLine("x#x")
+	         .patternLine("axa")
+	         .key('a', Registration.NULL_CORE.get())
+	         .key('x', Tags.Items.STONE)
+	         .key('#', ItemTags.COALS)
+	         .setGroup("technulligy")
+	         .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
+	         .build(consumer);
 	        ShapedRecipeBuilder.shapedRecipe(Registration.BASIC_CORE.get())
             .patternLine("axa")
             .patternLine("x#x")
@@ -58,5 +58,15 @@ public class Recipes extends RecipeProvider {
             .setGroup("technulligy")
             .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
             .build(consumer);	 
-	    }
+	        ShapedRecipeBuilder.shapedRecipe(Registration.AETHER_GENERATOR.get())
+	        .patternLine("aaa")
+	        .patternLine("xcx")
+	        .patternLine("bbb")
+	        .key('a', Registration.NULL_CORE.get())
+            .key('x', Registration.AETHER.get())
+            .key('c', Registration.BASIC_CORE.get())
+            .key('b', Registration.WEAK_CORE.get())
+            .setGroup("technulligy")
+				.addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE));
+	}
 }
