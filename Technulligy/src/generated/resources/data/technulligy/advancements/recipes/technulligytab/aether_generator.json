@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "technulligy:null_core"
+      "technulligy:aether_generator"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "technulligy:null_core"
+        "recipe": "technulligy:aether_generator"
       }
     }
   },

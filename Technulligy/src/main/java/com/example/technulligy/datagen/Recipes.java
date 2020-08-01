@@ -49,15 +49,6 @@ public class Recipes extends RecipeProvider {
             .setGroup("technulligy")
             .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
             .build(consumer);	 
-	        ShapedRecipeBuilder.shapedRecipe(Registration.NULL_CORE.get())
-	        .patternLine(" x ")
-            .patternLine("xax")
-            .patternLine(" x ")
-            .key('a', Registration.CORE_CENTER.get())
-            .key('x', ItemTags.PLANKS)
-            .setGroup("technulligy")
-            .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
-            .build(consumer);	 
 	        ShapedRecipeBuilder.shapedRecipe(Registration.AETHER_GENERATOR.get())
 	        .patternLine("aaa")
 	        .patternLine("xcx")
@@ -67,6 +58,16 @@ public class Recipes extends RecipeProvider {
             .key('c', Registration.BASIC_CORE.get())
             .key('b', Registration.WEAK_CORE.get())
             .setGroup("technulligy")
-				.addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE));
+				.addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
+            .build(consumer);	 
+	        ShapedRecipeBuilder.shapedRecipe(Registration.NULL_CORE.get())
+	        .patternLine(" x ")
+            .patternLine("xax")
+            .patternLine(" x ")
+            .key('a', Registration.CORE_CENTER.get())
+            .key('x', ItemTags.PLANKS)
+            .setGroup("technulligy")
+            .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE));
+          
 	}
 }
