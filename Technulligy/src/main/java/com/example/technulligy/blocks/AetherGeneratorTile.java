@@ -46,6 +46,7 @@ public class AetherGeneratorTile extends TileEntity implements ITickableTileEnti
 
 		if (counter > 0) {
 			counter--;
+			// Sets the amount of energy Aether ore contains
 			if (counter <= 0) {
 				energyStorage.addEnergy(1000);
 			}
