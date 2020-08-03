@@ -13,8 +13,13 @@
 
   "screen.technulligy.aether_generator": "Cool Screen",
 
+"message.shiftmessage":"Hold Shift",
+ "message.aethergenerator": "This block creates forge energy at a rate of 1000 FE a second or 50 FE a tick. It also inputs to adjacent energy cells but not cables.",
+
 "block.technulligy.aether_generator": "Aether Generator",
 "block.technulligy.aether_ore":"Aether Ore",
 "block.technulligy.c_oreb":"C-Ore",
 "block.technulligy.core_forge":"Core Forge"
+
+
 }	
