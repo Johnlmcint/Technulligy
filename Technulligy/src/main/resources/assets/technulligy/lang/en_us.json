@@ -17,6 +17,7 @@
  "message.aethergenerator": "This block creates forge energy at a rate of 1000 FE a second or 50 FE a tick. It also inputs to adjacent energy cells but not cables.",
 
 "block.technulligy.aether_generator": "Aether Generator",
+"block.technulligy.power_cube": "Power Cube",
 "block.technulligy.aether_ore":"Aether Ore",
 "block.technulligy.c_oreb":"C-Ore",
 "block.technulligy.core_forge":"Core Forge"
