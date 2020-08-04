@@ -33,7 +33,6 @@ public class PowerCubeTile extends TileEntity implements ITickableTileEntity {
 	private LazyOptional<IEnergyStorage> energy = LazyOptional.of(() -> energyStorage);
 	private int counter;
 
-
 	public PowerCubeTile() {
 		super(Registration.POWER_CUBE_TILE.get());
 	}
@@ -47,19 +46,7 @@ public class PowerCubeTile extends TileEntity implements ITickableTileEntity {
 		if (counter > 0) {
 			counter--;
 			// Sets the amount of energy Aether ore contains
-			if (counter <= 0) {
-				energyStorage.addEnergy(1000);
-			}
 			markDirty();
-		}
-
-		if (counter <= 0) {
-			ItemStack stack = itemHandler.getStackInSlot(0);
-			if (stack.getItem() == Registration.AETHER.get()) {
-				itemHandler.extractItem(0, 1, false);
-				counter = 20;
-				markDirty();
-			}
 		}
 
 		BlockState blockState = world.getBlockState(pos);
@@ -67,8 +54,19 @@ public class PowerCubeTile extends TileEntity implements ITickableTileEntity {
 			world.setBlockState(pos, blockState.with(BlockStateProperties.POWERED, counter > 0),
 					Constants.BlockFlags.NOTIFY_NEIGHBORS + Constants.BlockFlags.BLOCK_UPDATE);
 		}
+		energyStorage.setEnergy(recieveEnergy() + energyStorage.getEnergyStored());
+
+		if (energyStorage.getEnergyStored() <= 0) {
+			return;
+		}
 
 		sendOutPower();
+	}
+
+	private int recieveEnergy() {
+		int recieved = 0;
+		
+		return 0;
 	}
 
 	private void sendOutPower() {
@@ -98,11 +96,11 @@ public class PowerCubeTile extends TileEntity implements ITickableTileEntity {
 
 	@Override
 	public void read(BlockState blockstate, CompoundNBT tag) {
-		 itemHandler.deserializeNBT(tag.getCompound("inv"));
-	        energyStorage.deserializeNBT(tag.getCompound("energy"));
+		itemHandler.deserializeNBT(tag.getCompound("inv"));
+		energyStorage.deserializeNBT(tag.getCompound("energy"));
 
-	        counter = tag.getInt("counter");
-	        super.read(blockstate, tag);
+		counter = tag.getInt("counter");
+		super.read(blockstate, tag);
 	}
 
 	@Override
@@ -139,7 +137,7 @@ public class PowerCubeTile extends TileEntity implements ITickableTileEntity {
 	}
 
 	private CustomEnergyStorage createEnergy() {
-		return new CustomEnergyStorage(100000, 0) {
+		return new CustomEnergyStorage(1000000, 0) {
 			@Override
 			protected void onEnergyChanged() {
 				markDirty();

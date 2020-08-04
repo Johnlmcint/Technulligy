@@ -63,9 +63,9 @@ public class PowerCube extends Block {
 			ITooltipFlag flags) {
 		if (Screen.hasShiftDown()) {
 
-			list.add((new TranslationTextComponent("message.aethergenerator", Integer.toString(1000))).mergeStyle(TextFormatting.AQUA));
+			list.add((new TranslationTextComponent("message.powercube", Integer.toString(1000))).mergeStyle(TextFormatting.LIGHT_PURPLE));
 		} else {
-			list.add((new TranslationTextComponent("message.shiftmessage")).mergeStyle(TextFormatting.AQUA));
+			list.add((new TranslationTextComponent("message.shiftmessage")).mergeStyle(TextFormatting.LIGHT_PURPLE));
 		}
 	}
 
