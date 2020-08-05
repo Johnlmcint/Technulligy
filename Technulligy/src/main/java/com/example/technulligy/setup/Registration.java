@@ -1,5 +1,7 @@
 package com.example.technulligy.setup;
 
+import java.util.function.Supplier;
+
 import com.example.technulligy.Technulligy;
 import com.example.technulligy.Technulligy.CreativeItemGroup;
 import com.example.technulligy.blocks.AetherGenerator;
@@ -18,13 +20,17 @@ import com.example.technulligy.items.SavageSword;
 import com.example.technulligy.items.VitalityCore;
 import com.example.technulligy.items.WeakCore;
 import com.example.technulligy.items.WindCore;
-import com.example.technulligy.items.ZealousPicaxe;
+import com.example.technulligy.items.ZealousPickaxe;
 import com.example.technulligy.setup.CoreTier;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemTier;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.SwordItem;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.math.BlockPos;
@@ -53,8 +59,6 @@ public class Registration {
 	public static final RegistryObject<Item> CORE_CENTER = ITEMS.register("core_center", () -> new Item(new Item.Properties().group(CreativeItemGroup.instance)));
 	public static final RegistryObject<Item> AETHER = ITEMS.register("aether", () -> new Item(new Item.Properties().group(CreativeItemGroup.instance)));
 	public static final RegistryObject<Item> C_ORE = ITEMS.register("c_ore", () -> new Item(new Item.Properties().group(CreativeItemGroup.instance)));
-	public static final RegistryObject<Item> SAVAGE_SWORD = ITEMS.register("savage_sword", SavageSword::new);
-	public static final RegistryObject<Item> ZEALOUS_PICAXE = ITEMS.register("zealous_picaxe", ZealousPicaxe::new );
 	public static final RegistryObject<Item> BASIC_CORE = ITEMS.register("basic_core", BasicCore::new);
 	public static final RegistryObject<Item> WEAK_CORE = ITEMS.register("weak_core", WeakCore::new);
 	public static final RegistryObject<Item> SAVAGE_CORE = ITEMS.register("savage_core", SavageCore::new);
