@@ -12,4 +12,5 @@ public class WeakCore extends Item {
 				.group(CreativeItemGroup.instance)
 				);
 	}
+	
 }

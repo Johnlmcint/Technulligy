@@ -12,7 +12,7 @@ import net.minecraft.util.text.ITextComponent;
 
 public class PowerCubeScreen extends ContainerScreen<PowerCubeContainer> {
 
-	private ResourceLocation GUI = new ResourceLocation(Technulligy.MOD_ID, "textures/gui/simplegui.png");
+	private ResourceLocation GUI = new ResourceLocation(Technulligy.MOD_ID, "textures/gui/aether_gui.png");
 
 	public PowerCubeScreen(PowerCubeContainer container, PlayerInventory inv, ITextComponent name) {
 		super(container, inv, name);
