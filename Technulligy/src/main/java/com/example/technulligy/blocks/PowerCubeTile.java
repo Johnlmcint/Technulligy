@@ -26,7 +26,7 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
-public class AetherGeneratorTile extends TileEntity implements ITickableTileEntity {
+public class PowerCubeTile extends TileEntity implements ITickableTileEntity {
 	private ItemStackHandler itemHandler = createHandler();
 	private CustomEnergyStorage energyStorage = createEnergy();
 	private LazyOptional<IItemHandler> handler = LazyOptional.of(() -> itemHandler);
@@ -34,8 +34,8 @@ public class AetherGeneratorTile extends TileEntity implements ITickableTileEnti
 	private int counter;
 
 
-	public AetherGeneratorTile() {
-		super(Registration.AETHER_GENERATOR_TILE.get());
+	public PowerCubeTile() {
+		super(Registration.POWER_CUBE_TILE.get());
 	}
 
 	@Override

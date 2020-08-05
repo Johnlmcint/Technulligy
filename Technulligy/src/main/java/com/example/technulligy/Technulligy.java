@@ -3,11 +3,14 @@ package com.example.technulligy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.example.technulligy.blocks.AetherGeneratorScreen;
+import com.example.technulligy.blocks.PowerCubeScreen;
+
 import com.example.technulligy.init.BlockInit;
-//import com.example.technulligy.init.BlockInit.CreativeItemGroup;
 import com.example.technulligy.setup.Registration;
 import com.example.technulligy.world.gen.TechnulligyOreGen;
 import net.minecraft.item.ItemStack;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -29,9 +32,10 @@ public class Technulligy {
 
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-	//	Registration.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-		//Registration.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
-	//	Registration.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		Registration.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		Registration.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		Registration.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		Registration.TILES.register(FMLJavaModLoadingContext.get().getModEventBus());
 		instance = this;
 
 		MinecraftForge.EVENT_BUS.register(this);
@@ -42,6 +46,9 @@ public class Technulligy {
 	}
 
 	private void doClientStuff(final FMLClientSetupEvent event) {
+		ScreenManager.registerFactory(Registration.AETHER_GENERATOR_CONTAINER.get(), AetherGeneratorScreen::new);
+		ScreenManager.registerFactory(Registration.POWER_CUBE_CONTAINER.get(), PowerCubeScreen::new);
+
 	}
 	public static class CreativeItemGroup extends ItemGroup {
 		public static final CreativeItemGroup instance = new CreativeItemGroup(ItemGroup.GROUPS.length,"technulligytab");

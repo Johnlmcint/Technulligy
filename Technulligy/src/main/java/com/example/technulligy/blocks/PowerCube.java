@@ -32,10 +32,11 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.network.NetworkHooks;
-
-public class AetherGenerator extends Block {
+import com.example.technulligy.blocks.PowerCubeContainer;
+import com.example.technulligy.blocks.PowerCubeTile;
+public class PowerCube extends Block {
 //Defines the sound, location, and tools needed to harvest this block
-	public AetherGenerator() {
+	public PowerCube() {
 
 		// Properties of block
 		super(Properties.create(Material.IRON)
@@ -89,16 +90,16 @@ public class AetherGenerator extends Block {
 			Hand hand, BlockRayTraceResult trace) {
 		if (!world.isRemote) {
 			TileEntity tileEntity = world.getTileEntity(pos);
-			if (tileEntity instanceof AetherGeneratorTile) {
+			if (tileEntity instanceof PowerCubeTile) {
 				INamedContainerProvider containerProvider = new INamedContainerProvider() {
 					@Override
 					public ITextComponent getDisplayName() {
-						return new TranslationTextComponent("screen.technulligy.aether_generator");
+						return new TranslationTextComponent("screen.technulligy.power_cube");
 					}
 
 					@Override
 					public Container createMenu(int i, PlayerInventory playerInventory, PlayerEntity playerEntity) {
-						return new AetherGeneratorContainer(i, world, pos, playerInventory, playerEntity);
+						return new PowerCubeContainer(i, world, pos, playerInventory, playerEntity);
 					}
 				};
 				NetworkHooks.openGui((ServerPlayerEntity) player, containerProvider, tileEntity.getPos());
@@ -112,6 +113,6 @@ public class AetherGenerator extends Block {
 	@Nullable
 	@Override
 	public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-		return new AetherGeneratorTile();
+		return new PowerCubeTile();
 	}
 }

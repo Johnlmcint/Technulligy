@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "technulligy",
+  "pattern": [
+    " x ",
+    "xax",
+    " x "
+  ],
+  "key": {
+    "a": {
+      "item": "technulligy:core_center"
+    },
+    "x": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "technulligy:null_core"
+  }
+}

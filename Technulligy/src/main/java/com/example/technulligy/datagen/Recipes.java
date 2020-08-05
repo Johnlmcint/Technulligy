@@ -12,6 +12,7 @@ import net.minecraft.data.RecipeProvider;
 import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraftforge.common.Tags;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.item.Items;
 
 public class Recipes extends RecipeProvider {
 	public Recipes(DataGenerator generatorIn) {
@@ -20,15 +21,15 @@ public class Recipes extends RecipeProvider {
 	 @Override
 	    protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
 	        ShapedRecipeBuilder.shapedRecipe(Registration.WEAK_CORE.get())
-	                .patternLine("axa")
-	                .patternLine("x#x")
-	                .patternLine("axa")
-	                .key('a', Registration.NULL_CORE.get())
-	                .key('x', Tags.Items.STONE)
-	                .key('#', ItemTags.COALS)
-	                .setGroup("technulligy")
-	                .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
-	                .build(consumer);
+	         .patternLine("axa")
+	         .patternLine("x#x")
+	         .patternLine("axa")
+	         .key('a', Registration.NULL_CORE.get())
+	         .key('x', Tags.Items.STONE)
+	         .key('#', ItemTags.COALS)
+	         .setGroup("technulligy")
+	         .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
+	         .build(consumer);
 	        ShapedRecipeBuilder.shapedRecipe(Registration.BASIC_CORE.get())
             .patternLine("axa")
             .patternLine("x#x")
@@ -38,6 +39,35 @@ public class Recipes extends RecipeProvider {
             .key('#', Registration.AETHER.get())
             .setGroup("technulligy")
             .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
-            .build(consumer);	        
-	    }
+            .build(consumer);	 
+	        ShapedRecipeBuilder.shapedRecipe(Registration.CORE_CENTER.get())
+	        .patternLine("axa")
+            .patternLine("xxx")
+            .patternLine("axa")
+            .key('a', Tags.Items.DYES_RED)
+            .key('x', Tags.Items.RODS_WOODEN)
+            .setGroup("technulligy")
+            .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
+            .build(consumer);	 
+	        ShapedRecipeBuilder.shapedRecipe(Registration.AETHER_GENERATOR.get())
+	        .patternLine("aaa")
+	        .patternLine("xcx")
+	        .patternLine("bbb")
+	        .key('a', Registration.NULL_CORE.get())
+            .key('x', Registration.AETHER.get())
+            .key('c', Registration.BASIC_CORE.get())
+            .key('b', Registration.WEAK_CORE.get())
+            .setGroup("technulligy")
+				.addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
+            .build(consumer);	 
+	        ShapedRecipeBuilder.shapedRecipe(Registration.NULL_CORE.get())
+	        .patternLine(" x ")
+            .patternLine("xax")
+            .patternLine(" x ")
+            .key('a', Registration.CORE_CENTER.get())
+            .key('x', ItemTags.PLANKS)
+            .setGroup("technulligy")
+            .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE));
+          
+	}
 }

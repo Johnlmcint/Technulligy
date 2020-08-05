@@ -22,14 +22,14 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
-public class AetherGeneratorContainer extends Container {
+public class PowerCubeContainer extends Container {
 
     private TileEntity tileEntity;
     private PlayerEntity playerEntity;
     private IItemHandler playerInventory;
 
-    public AetherGeneratorContainer(int windowId, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player) {
-    	super(Registration.AETHER_GENERATOR_CONTAINER.get(), windowId);
+    public PowerCubeContainer(int windowId, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player) {
+    	super(Registration.POWER_CUBE_CONTAINER.get(), windowId);
         tileEntity = world.getTileEntity(pos);
         this.playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);
@@ -83,7 +83,7 @@ public class AetherGeneratorContainer extends Container {
 
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {
-    	return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), playerEntity, Registration.AETHER_GENERATOR.get());
+    	return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), playerEntity, Registration.POWERCUBE.get());
     }
 
     @Override

@@ -10,11 +10,11 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
-public class AetherGeneratorScreen extends ContainerScreen<AetherGeneratorContainer> {
+public class PowerCubeScreen extends ContainerScreen<PowerCubeContainer> {
 
 	private ResourceLocation GUI = new ResourceLocation(Technulligy.MOD_ID, "textures/gui/simplegui.png");
 
-	public AetherGeneratorScreen(AetherGeneratorContainer container, PlayerInventory inv, ITextComponent name) {
+	public PowerCubeScreen(PowerCubeContainer container, PlayerInventory inv, ITextComponent name) {
 		super(container, inv, name);
 	}
 	  @Override

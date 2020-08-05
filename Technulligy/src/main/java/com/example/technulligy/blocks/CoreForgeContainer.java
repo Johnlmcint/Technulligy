@@ -1,4 +1,4 @@
-package com.example.technulligy.blocks;
+/*package com.example.technulligy.blocks;
 
 import com.example.technulligy.setup.Registration;
 import com.example.technulligy.tools.CustomEnergyStorage;
@@ -22,14 +22,14 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
-public class AetherGeneratorContainer extends Container {
+public class CoreForgeContainer extends Container {
 
     private TileEntity tileEntity;
     private PlayerEntity playerEntity;
     private IItemHandler playerInventory;
 
-    public AetherGeneratorContainer(int windowId, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player) {
-    	super(Registration.AETHER_GENERATOR_CONTAINER.get(), windowId);
+    public CoreForgeContainer(int windowId, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player) {
+    	super(Registration.CORE_FORGE_CONTAINER.get(), windowId);
         tileEntity = world.getTileEntity(pos);
         this.playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);
@@ -83,7 +83,7 @@ public class AetherGeneratorContainer extends Container {
 
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {
-    	return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), playerEntity, Registration.AETHER_GENERATOR.get());
+    	return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), playerEntity, Registration.CORE_FORGE.get());
     }
 
     @Override
@@ -99,7 +99,7 @@ public class AetherGeneratorContainer extends Container {
                 }
                 slot.onSlotChange(stack, itemstack);
             } else {
-                if (stack.getItem() == Registration.AETHER.get()) {
+                if (stack.getItem() == Registration.NULL_CORE.get()) {
                     if (!this.mergeItemStack(stack, 0, 1, false)) {
                         return ItemStack.EMPTY;
                     }
@@ -155,4 +155,4 @@ public class AetherGeneratorContainer extends Container {
         topRow += 58;
         addSlotRange(playerInventory, 0, leftCol, topRow, 9, 18);
     }
-}
+}*/

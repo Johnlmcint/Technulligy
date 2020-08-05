@@ -3,21 +3,18 @@
   "group": "technulligy",
   "pattern": [
     "axa",
-    "x#x",
+    "xxx",
     "axa"
   ],
   "key": {
     "a": {
-      "item": "technulligy:null_core"
+      "tag": "forge:dyes/red"
     },
     "x": {
-      "tag": "forge:stone"
-    },
-    "#": {
-      "tag": "minecraft:coals"
+      "tag": "forge:rods/wooden"
     }
   },
   "result": {
-    "item": "technulligy:weak_core"
+    "item": "technulligy:core_center"
   }
 }
