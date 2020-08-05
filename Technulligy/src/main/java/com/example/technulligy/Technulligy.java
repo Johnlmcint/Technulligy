@@ -50,7 +50,7 @@ public class Technulligy {
 		}
 		@Override
 		public ItemStack createIcon() {
-			return new ItemStack(BlockInit.c_oreb);
+			return new ItemStack(Registration.NULL_CORE.get());
 		}
 	}
 }
