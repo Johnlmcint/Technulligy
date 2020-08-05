@@ -6,9 +6,12 @@ import net.minecraft.data.BlockStateProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
 
-public class BlockStates  {
+public class BlockStates extends BlockStateProvider {
 
-	/*public BlockStates(DataGenerator gen, ExistingFileHelper exFileHelper) {
-		super(gen, Technulligy.MOD_ID, exFileHelper);
-	}*/
+	public BlockStates(DataGenerator gen) {
+		super(gen);
+	}
+
+	
+
 }

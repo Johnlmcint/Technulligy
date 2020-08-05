@@ -1,4 +1,4 @@
-package com.example.technulligy.blocks;
+/*package com.example.technulligy.blocks;
 
 import com.example.technulligy.Technulligy;
 import com.mojang.blaze3d.matrix.MatrixStack;
@@ -10,22 +10,13 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
-public class AetherGeneratorScreen extends ContainerScreen<AetherGeneratorContainer> {
+public class CoreForgeScreen extends ContainerScreen<AetherGeneratorContainer> {
 
 	private ResourceLocation GUI = new ResourceLocation(Technulligy.MOD_ID, "textures/gui/simplegui.png");
 
-	public AetherGeneratorScreen(AetherGeneratorContainer container, PlayerInventory inv, ITextComponent name) {
+	public CoreForgeScreen(AetherGeneratorContainer container, PlayerInventory inv, ITextComponent name) {
 		super(container, inv, name);
 	}
-	  @Override
-	    public void render(MatrixStack Matrixstack,int mouseX, int mouseY, float partialTicks) {
-	        this.renderBackground(Matrixstack);
-	        super.render(Matrixstack, mouseX, mouseY, partialTicks);
-	    }
-	  @Override
-		protected void drawGuiContainerForegroundLayer(MatrixStack Matrixstack, int mouseX, int mouseY) {
-			drawString(Matrixstack, Minecraft.getInstance().fontRenderer, "Energy: " + container.getEnergy(), 10, 10, 0xffffff);
-		}
 	@SuppressWarnings("deprecation")
 	@Override
 	protected void drawGuiContainerBackgroundLayer(MatrixStack Matrixstack, float partialTicks, int mousex, int mouseY) {
@@ -37,6 +28,14 @@ public class AetherGeneratorScreen extends ContainerScreen<AetherGeneratorContai
 
 	}
 
-	
-  
+	@Override
+	protected void drawGuiContainerForegroundLayer(MatrixStack Matrixstack, int mouseX, int mouseY) {
+		drawString(Matrixstack, Minecraft.getInstance().fontRenderer, "Energy: " + container.getEnergy(), 10, 10, 0xffffff);
+	}
+    @Override
+    public void render(MatrixStack Matrixstack,int mouseX, int mouseY, float partialTicks) {
+        this.renderBackground(Matrixstack);
+        super.render(Matrixstack, mouseX, mouseY, partialTicks);
+    }
 }
+*/
