@@ -4,6 +4,7 @@ import com.example.technulligy.Technulligy.CreativeItemGroup;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Items;
 
 public class BasicCore extends Item {
 	public BasicCore(){
