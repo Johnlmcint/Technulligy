@@ -1,7 +1,5 @@
 package com.example.technulligy.setup;
 
-import java.util.function.Supplier;
-
 import com.example.technulligy.Technulligy;
 import com.example.technulligy.Technulligy.CreativeItemGroup;
 import com.example.technulligy.blocks.AetherGenerator;
@@ -16,22 +14,13 @@ import com.example.technulligy.items.BasicCore;
 import com.example.technulligy.items.GuardianCore;
 import com.example.technulligy.items.HasteCore;
 import com.example.technulligy.items.SavageCore;
-import com.example.technulligy.items.SavageSword;
 import com.example.technulligy.items.VitalityCore;
 import com.example.technulligy.items.WeakCore;
 import com.example.technulligy.items.WindCore;
-import com.example.technulligy.items.ZealousPickaxe;
-import com.example.technulligy.setup.CoreTier;
 import net.minecraft.block.Block;
-import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemTier;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.SwordItem;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -65,6 +54,7 @@ public class Registration {
 	public static final RegistryObject<Item> GUARD_CORE = ITEMS.register("guard_core", GuardianCore::new);
 	public static final RegistryObject<Item> WIND_CORE= ITEMS.register("wind_core", WindCore::new);
 	public static final RegistryObject<Item> VITAL_CORE = ITEMS.register("vital_core", VitalityCore::new);
+	
 	public static final RegistryObject<Item> HASTE_CORE = ITEMS.register("haste_core", HasteCore::new);
 	public static final RegistryObject<Block> CORE_FORGE = BLOCKS.register("core_forge", CoreForge::new);
 	public static final RegistryObject<Block> AETHER_ORE = BLOCKS.register("aether_ore", AetherOre::new);
