@@ -6,7 +6,7 @@ import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
 
 public class AetherOre extends Block{
-	//States what the block sounds like, how hard it is to find, and how hard it is to mine.
+	
 	public AetherOre() {
 		super(Properties.create(Material.IRON)
 				
