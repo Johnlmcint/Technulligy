@@ -1,6 +1,0 @@
-{
-  "parent": "technulligy:block/basic_cube",
-  "textures": {
-    "all": "technulligy:block/aether_ore"
-  }
-}

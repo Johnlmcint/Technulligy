@@ -1,6 +1,6 @@
 	{
     "parent": "block/cube_all",
     "textures": {
-        "all": "technulligy:block/power_cube"
+        "all": "technulligy:block/aether_ore"
     }
 }

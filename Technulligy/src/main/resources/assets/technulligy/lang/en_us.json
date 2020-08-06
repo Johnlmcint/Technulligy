@@ -9,11 +9,9 @@
  "item.technulligy.wind_core": "Wind Core",
  "item.technulligy.vital_core": "Vitality Core",
  "item.technulligy.haste_core": "Haste Core",
- "item.technulligy.core_center": "Null Core Center",
-"item.technulligy.zealous_picaxe": "Zealous Picaxe",
-"item.technulligy.savage_sword": "Savage Sword",
 
- "screen.technulligy.aether_generator": "Cool Screen",
+<<<<<<< HEAD
+  "screen.technulligy.aether_generator": "Cool Screen",
 
 "message.shiftmessage":"Hold Shift",
  "message.aethergenerator": "This block creates forge energy at a rate of 1000 FE a second or 50 FE a tick with Aether (obtained from Aether Ore). It also inputs to adjacent energy cells but not cables.",
@@ -22,9 +20,9 @@
 
 "block.technulligy.aether_generator": "Aether Generator",
 "block.technulligy.power_cube": "Power Cube",
+=======
+>>>>>>> parent of ce6b5cb... Merge branch 'master' of https://github.com/Johnlmcint/Technulligy
 "block.technulligy.aether_ore":"Aether Ore",
 "block.technulligy.c_oreb":"C-Ore",
 "block.technulligy.core_forge":"Core Forge"
-
-
 }	
