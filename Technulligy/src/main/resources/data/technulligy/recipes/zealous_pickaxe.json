@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "technulligy",
+  "pattern": [
+    "axa",
+    " x ",
+    " # "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:obsidian"
+    },
+    "#": {
+      "item": "minecraft:netherite_pickaxe"
+    },
+    "x": {
+      "item": "technulligy:haste_core"
+    }
+  },
+  "result": {
+    "item": "technulligy:zealous_pickaxe"
+  }
+}

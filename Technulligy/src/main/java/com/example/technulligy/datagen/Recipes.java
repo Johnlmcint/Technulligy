@@ -94,6 +94,25 @@ public class Recipes extends RecipeProvider {
             .setGroup("technulligy")
             .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
             .build(consumer);
+	        ShapedRecipeBuilder.shapedRecipe(Registration.SAVAGE_SWORD.get())
+	        .patternLine(" x ")
+            .patternLine(" x ")
+            .patternLine(" # ")
+            .key('x', Registration.SAVAGE_CORE.get())
+            .key('#', Items.NETHERITE_SWORD)
+            .setGroup("technulligy")
+            .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
+            .build(consumer);
+	        ShapedRecipeBuilder.shapedRecipe(Registration.ZEALOUS_PICKAXE.get())
+	        .patternLine("axa")
+            .patternLine(" x ")
+            .patternLine(" # ")
+            .key('a', Items.OBSIDIAN)
+            .key('#', Items.NETHERITE_PICKAXE)
+            .key('x', Registration.HASTE_CORE.get())
+            .setGroup("technulligy")
+            .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
+            .build(consumer);
           
 	}
 }

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "technulligy",
+  "pattern": [
+    " x ",
+    " x ",
+    " # "
+  ],
+  "key": {
+    "x": {
+      "item": "technulligy:savage_core"
+    },
+    "#": {
+      "item": "minecraft:netherite_sword"
+    }
+  },
+  "result": {
+    "item": "technulligy:savage_sword"
+  }
+}

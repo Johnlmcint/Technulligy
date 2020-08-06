@@ -54,8 +54,8 @@ public class Registration {
 	public static final RegistryObject<Item> CORE_CENTER = ITEMS.register("core_center", () -> new Item(new Item.Properties().group(CreativeItemGroup.instance)));
 	public static final RegistryObject<Item> AETHER = ITEMS.register("aether", () -> new Item(new Item.Properties().group(CreativeItemGroup.instance)));
 	public static final RegistryObject<Item> C_ORE = ITEMS.register("c_ore", () -> new Item(new Item.Properties().group(CreativeItemGroup.instance)));
-	//public static final RegistryObject<Item> SAVAGE_SWORD = ITEMS.register("savage_sword", () -> new SwordItem(ItemTier.NETHERITE, 4, -2.1F, (new Item.Properties()).group(CreativeItemGroup.instance).isBurnable()));
-//	public static final RegistryObject<Item> ZEALOUS_PICKAXE = ITEMS.register("zealous_pickaxe", () -> new PickaxeItem(ItemTier.NETHERITE, 1, -2.8F, (new Item.Properties()).group(ItemGroup.TOOLS).isBurnable()));
+	public static final RegistryObject<Item> SAVAGE_SWORD = ITEMS.register("savage_sword", () -> new SwordItem(TechnulligyTiers.AETHER, 4, -2.4F, (new Item.Properties()).group(CreativeItemGroup.instance).isBurnable()));
+ public static final RegistryObject<Item> ZEALOUS_PICKAXE = ITEMS.register("zealous_pickaxe", () -> new PickaxeItem(TechnulligyTiers.AETHER, 1, -2.8F, (new Item.Properties()).group(CreativeItemGroup.instance).isBurnable()));
 	public static final RegistryObject<Item> BASIC_CORE = ITEMS.register("basic_core", BasicCore::new);
 	public static final RegistryObject<Item> WEAK_CORE = ITEMS.register("weak_core", WeakCore::new);
 	public static final RegistryObject<Item> SAVAGE_CORE = ITEMS.register("savage_core", SavageCore::new);

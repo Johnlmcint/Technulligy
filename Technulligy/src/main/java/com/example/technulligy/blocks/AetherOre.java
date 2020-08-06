@@ -11,8 +11,8 @@ public class AetherOre extends Block{
 		super(Properties.create(Material.IRON)
 				
 				.sound(SoundType.STONE)
-				.hardnessAndResistance(3,15)
-				.harvestLevel(1)
+				.hardnessAndResistance(4,15)
+				.harvestLevel(2)
 				.harvestTool(ToolType.PICKAXE)
 				.setLightLevel((p_235470_0_) -> {
 					return 2;
