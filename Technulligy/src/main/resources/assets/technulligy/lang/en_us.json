@@ -12,10 +12,13 @@
  "item.technulligy.core_center": "Null Core Center",
 
   "screen.technulligy.aether_generator": "Cool Screen",
+ "itemGroup.technulligytab": "Technulligy",
 
 "message.shiftmessage":"Hold Shift",
  "message.aethergenerator": "This block creates forge energy at a rate of 1000 FE a second or 50 FE a tick with Aether (obtained from Aether Ore). It also inputs to adjacent energy cells but not cables.",
 "message.powercube": "This block holds 1,000,000 forge energy",
+"message.wip": "This item is a work in progress and current is not functional",
+
 
 "block.technulligy.aether_generator": "Aether Generator",
 "block.technulligy.power_cube": "Power Cube",

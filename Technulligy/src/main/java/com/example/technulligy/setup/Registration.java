@@ -23,6 +23,10 @@ import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemTier;
+import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.SwordItem;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -50,6 +54,8 @@ public class Registration {
 	public static final RegistryObject<Item> CORE_CENTER = ITEMS.register("core_center", () -> new Item(new Item.Properties().group(CreativeItemGroup.instance)));
 	public static final RegistryObject<Item> AETHER = ITEMS.register("aether", () -> new Item(new Item.Properties().group(CreativeItemGroup.instance)));
 	public static final RegistryObject<Item> C_ORE = ITEMS.register("c_ore", () -> new Item(new Item.Properties().group(CreativeItemGroup.instance)));
+	//public static final RegistryObject<Item> SAVAGE_SWORD = ITEMS.register("savage_sword", () -> new SwordItem(ItemTier.NETHERITE, 4, -2.1F, (new Item.Properties()).group(CreativeItemGroup.instance).isBurnable()));
+//	public static final RegistryObject<Item> ZEALOUS_PICKAXE = ITEMS.register("zealous_pickaxe", () -> new PickaxeItem(ItemTier.NETHERITE, 1, -2.8F, (new Item.Properties()).group(ItemGroup.TOOLS).isBurnable()));
 	public static final RegistryObject<Item> BASIC_CORE = ITEMS.register("basic_core", BasicCore::new);
 	public static final RegistryObject<Item> WEAK_CORE = ITEMS.register("weak_core", WeakCore::new);
 	public static final RegistryObject<Item> SAVAGE_CORE = ITEMS.register("savage_core", SavageCore::new);
@@ -59,6 +65,7 @@ public class Registration {
 	public static final RegistryObject<Item> HASTE_CORE = ITEMS.register("haste_core", HasteCore::new);
 	public static final RegistryObject<Block> CORE_FORGE = BLOCKS.register("core_forge", CoreForge::new);
 	public static final RegistryObject<Block> AETHER_ORE = BLOCKS.register("aether_ore", AetherOre::new);
+	
 	public static final RegistryObject<Item> AETHER_ORE_ITEM = ITEMS.register("aether_ore",() -> new BlockItem(AETHER_ORE.get(), new Item.Properties().group(CreativeItemGroup.instance)));
     public static final RegistryObject<Item> CORE_FORGE_ITEM  = ITEMS.register("core_forge", () -> new BlockItem(CORE_FORGE.get(), new Item.Properties().group(CreativeItemGroup.instance)));
     

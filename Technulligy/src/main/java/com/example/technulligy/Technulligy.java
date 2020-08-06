@@ -19,7 +19,6 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
 @Mod("technulligy")
 @Mod.EventBusSubscriber(modid = Technulligy.MOD_ID, bus = Bus.MOD)
 public class Technulligy {
@@ -57,7 +56,7 @@ public class Technulligy {
 		}
 		@Override
 		public ItemStack createIcon() {
-			return new ItemStack(BlockInit.c_oreb);
+			return new ItemStack(Registration.NULL_CORE.get());
 		}
 	}
 }

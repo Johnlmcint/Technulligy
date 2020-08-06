@@ -68,6 +68,32 @@ public class Recipes extends RecipeProvider {
             .key('x', ItemTags.PLANKS)
             .setGroup("technulligy")
             .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE));
+	        ShapedRecipeBuilder.shapedRecipe(Registration.HASTE_CORE.get())
+	        .patternLine("#b#")
+            .patternLine("cad")
+            .patternLine("#e#")
+            .key('a', Registration.BASIC_CORE.get())
+            .key('#', Tags.Items.GEMS_DIAMOND)
+            .key('b', Items.DIAMOND_PICKAXE)
+            .key('c', Items.GOLDEN_PICKAXE)
+            .key('d', Items.IRON_PICKAXE)
+            .key('e', Items.NETHERITE_INGOT)
+            .setGroup("technulligy")
+            .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
+            .build(consumer);	
+	        ShapedRecipeBuilder.shapedRecipe(Registration.SAVAGE_CORE.get())
+	        .patternLine("#b#")
+            .patternLine("cad")
+            .patternLine("#e#")
+            .key('a', Registration.BASIC_CORE.get())
+            .key('#', Tags.Items.GEMS_DIAMOND)
+            .key('b', Items.DIAMOND_SWORD)
+            .key('c', Items.GOLDEN_SWORD)
+            .key('d', Items.IRON_SWORD)
+            .key('e', Items.NETHERITE_INGOT)
+            .setGroup("technulligy")
+            .addCriterion("stone", InventoryChangeTrigger.Instance.forItems(Blocks.STONE))
+            .build(consumer);
           
 	}
 }
