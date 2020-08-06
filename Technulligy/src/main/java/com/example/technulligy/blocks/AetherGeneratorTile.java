@@ -37,7 +37,8 @@ public class AetherGeneratorTile extends TileEntity implements ITickableTileEnti
 	public AetherGeneratorTile() {
 		super(Registration.AETHER_GENERATOR_TILE.get());
 	}
-
+// All tickable tile entitys require a tick function, to set what they do each tick
+// 20 tick = one second
 	@Override
 	public void tick() {
 		if (world.isRemote) {
@@ -46,7 +47,7 @@ public class AetherGeneratorTile extends TileEntity implements ITickableTileEnti
 
 		if (counter > 0) {
 			counter--;
-			// Sets the amount of energy Aether ore contains
+			// Sets the amount of energy Aether  contains
 			if (counter <= 0) {
 				energyStorage.addEnergy(1000);
 			}
@@ -61,7 +62,7 @@ public class AetherGeneratorTile extends TileEntity implements ITickableTileEnti
 				markDirty();
 			}
 		}
-
+//Check for nearby block and update tile entity
 		BlockState blockState = world.getBlockState(pos);
 		if (blockState.get(BlockStateProperties.POWERED) != counter > 0) {
 			world.setBlockState(pos, blockState.with(BlockStateProperties.POWERED, counter > 0),

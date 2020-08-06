@@ -45,8 +45,7 @@ public class AetherGeneratorContainer extends Container {
 
     // Setup syncing of power from server to client so that the GUI can show the amount of power in the block
     private void trackPower() {
-        // Unfortunatelly on a dedicated server ints are actually truncated to short so we need
-        // to split our integer here (split our 32 bit integer into two 16 bit integers)
+
         trackInt(new IntReferenceHolder() {
             @Override
             public int get() {
@@ -86,6 +85,7 @@ public class AetherGeneratorContainer extends Container {
     	return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), playerEntity, Registration.AETHER_GENERATOR.get());
     }
 
+    // Take item stack and check if its aether, to see if it can create power or not
     @Override
     public ItemStack transferStackInSlot(PlayerEntity playerIn, int index) {
         ItemStack itemstack = ItemStack.EMPTY;

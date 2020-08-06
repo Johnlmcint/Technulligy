@@ -46,17 +46,18 @@ public class AetherGenerator extends Block {
 					return 14;
 				}));
 	}
-
+// is title entity
 	@Override
 	public boolean hasTileEntity(BlockState state) {
 		return true;
 	}
 
+	// Has Container properties
 	@Override
 	protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
 		builder.add(BlockStateProperties.FACING, BlockStateProperties.POWERED);
 	}
-
+// Item Tool Tips
 	@Override
 	public void addInformation(ItemStack stack, @Nullable IBlockReader reader, List<ITextComponent> list,
 			ITooltipFlag flags) {
@@ -83,7 +84,7 @@ public class AetherGenerator extends Block {
 	public BlockState getStateForPlacement(BlockItemUseContext context) {
 		return getDefaultState().with(BlockStateProperties.FACING, context.getNearestLookingDirection().getOpposite());
 	}
-
+// Block Activation
 	@Override
 	public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player,
 			Hand hand, BlockRayTraceResult trace) {

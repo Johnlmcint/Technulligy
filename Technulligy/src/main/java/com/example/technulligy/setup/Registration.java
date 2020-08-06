@@ -1,5 +1,5 @@
 package com.example.technulligy.setup;
-
+//imports
 import com.example.technulligy.Technulligy;
 import com.example.technulligy.Technulligy.CreativeItemGroup;
 import com.example.technulligy.blocks.AetherGenerator;
@@ -37,6 +37,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class Registration {
+	// Registering Events to the event bus and creating registries
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
 			Technulligy.MOD_ID);
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
@@ -50,6 +51,7 @@ public class Registration {
 		TILES.register(FMLJavaModLoadingContext.get().getModEventBus());
 	}
 
+	// Using lambda expressions to shorten class creation
 	public static final RegistryObject<Item> NULL_CORE = ITEMS.register("null_core", () -> new Item(new Item.Properties().group(CreativeItemGroup.instance)));
 	public static final RegistryObject<Item> CORE_CENTER = ITEMS.register("core_center", () -> new Item(new Item.Properties().group(CreativeItemGroup.instance)));
 	public static final RegistryObject<Item> AETHER = ITEMS.register("aether", () -> new Item(new Item.Properties().group(CreativeItemGroup.instance)));
