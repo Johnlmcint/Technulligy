@@ -40,8 +40,8 @@ public class AetherGenerator extends Block {
 		// Properties of block
 		super(Properties.create(Material.IRON)
 
-				.sound(SoundType.STONE).hardnessAndResistance(1, 15).harvestLevel(1).harvestTool(ToolType.PICKAXE)
-				.harvestLevel(1)
+				.sound(SoundType.STONE).hardnessAndResistance(4, 15).harvestTool(ToolType.PICKAXE)
+				.harvestLevel(2)
 				.setLightLevel((p_235470_0_) -> {
 					return 14;
 				}));

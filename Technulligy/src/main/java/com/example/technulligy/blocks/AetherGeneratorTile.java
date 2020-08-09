@@ -49,7 +49,7 @@ public class AetherGeneratorTile extends TileEntity implements ITickableTileEnti
 			counter--;
 			// Sets the amount of energy Aether  contains
 			if (counter <= 0) {
-				energyStorage.addEnergy(1000);
+				energyStorage.addEnergy(10000);
 			}
 			markDirty();
 		}
@@ -80,7 +80,7 @@ public class AetherGeneratorTile extends TileEntity implements ITickableTileEnti
 				if (te != null) {
 					boolean doContinue = te.getCapability(CapabilityEnergy.ENERGY, direction).map(handler -> {
 						if (handler.canReceive()) {
-							int received = handler.receiveEnergy(Math.min(capacity.get(), 1000), false);
+							int received = handler.receiveEnergy(Math.min(capacity.get(), 50000), false);
 							capacity.addAndGet(-received);
 							energyStorage.consumeEnergy(received);
 							markDirty();

@@ -28,7 +28,7 @@
                 },
                 {
                   "source": "Energy",
-                  "target	": "BlockEntityTag.Energy",
+                  "target": "BlockEntityTag.Energy",
                   "op": "replace"
                 }
               ]

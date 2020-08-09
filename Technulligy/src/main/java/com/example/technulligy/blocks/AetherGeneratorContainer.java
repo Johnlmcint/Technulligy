@@ -79,6 +79,19 @@ public class AetherGeneratorContainer extends Container {
     public int getEnergy() {
         return tileEntity.getCapability(CapabilityEnergy.ENERGY).map(IEnergyStorage::getEnergyStored).orElse(0);
     }
+    public int getMaxPower() {
+        return  100000;
+    }
+
+
+    public int getMaxBurn() {
+        return  20;
+    }
+
+    public int getRemaining() {
+        return  2;
+    }
+
 
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {

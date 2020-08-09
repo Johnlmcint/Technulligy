@@ -12,7 +12,7 @@ import net.minecraft.util.text.ITextComponent;
 
 public class AetherGeneratorScreen extends ContainerScreen<AetherGeneratorContainer> {
 // GUI Creatin
-	private ResourceLocation GUI = new ResourceLocation(Technulligy.MOD_ID, "textures/gui/simplegui.png");
+	private ResourceLocation GUI = new ResourceLocation(Technulligy.MOD_ID, "textures/gui/aether_generator.png");
 
 	public AetherGeneratorScreen(AetherGeneratorContainer container, PlayerInventory inv, ITextComponent name) {
 		super(container, inv, name);

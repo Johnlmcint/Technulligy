@@ -19,6 +19,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+// Every mod needs a mod id and they cannot be the same as anothers
 @Mod("technulligy")
 @Mod.EventBusSubscriber(modid = Technulligy.MOD_ID, bus = Bus.MOD)
 public class Technulligy {
@@ -28,7 +29,7 @@ public class Technulligy {
 	public static Technulligy instance;
 
 	public Technulligy() {
-
+// adding listeners and event busses
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 		Registration.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -41,10 +42,12 @@ public class Technulligy {
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {
+		// server registration
 		TechnulligyOreGen.generateOre();
 	}
 
 	private void doClientStuff(final FMLClientSetupEvent event) {
+		// client registration
 		ScreenManager.registerFactory(Registration.AETHER_GENERATOR_CONTAINER.get(), AetherGeneratorScreen::new);
 		ScreenManager.registerFactory(Registration.POWER_CUBE_CONTAINER.get(), PowerCubeScreen::new);
 
